@@ -61,7 +61,7 @@
     width: 450px;
     height: 500px;
     margin: 0;
-    margin-top: 60px;
+    margin-top: 90px;
     margin-right: 20px;
   }
   .footer {
@@ -105,11 +105,11 @@
     font-family: 'product', 'sans';
     font-size: 24px;
     font-weight: 300;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
   .head p {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 350;
     margin-top: 0;
   }
   .ref {
@@ -131,7 +131,7 @@
     margin: 0;
     width: 370px;
     margin-top: -10px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     line-height: 18px;
     font-weight: 400;
   }
@@ -173,9 +173,9 @@
   .row button {
     background: #1a73e8;
     font-family: 'product', 'sans';
-    padding: 10px 25px 10px 25px;
+    padding: 9px 25px 9px 25px;
     color: white;
-    border-radius: 5px;
+    border-radius: 4px;
     font-size: 14px;
     outline: none;
     border: none;
@@ -202,7 +202,7 @@
         -ms-flex-align: center;
             align-items: center;
     width: 100vw;
-    height: 100vh;
+    height: 95vh;
   }
   .container {
     font-family: 'Roboto';
@@ -236,6 +236,7 @@
     text-align: left;
     font-weight: 500;
     font-size: 14px;
+    margin-top: -5px;
   }
   input:focus {
     outline: none;
