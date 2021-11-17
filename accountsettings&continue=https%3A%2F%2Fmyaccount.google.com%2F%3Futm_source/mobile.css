@@ -307,6 +307,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-bottom: 15px;
   }
   .message img {
     height: 15px;
@@ -319,6 +320,7 @@
     font-weight: 400;
     margin: 0;
     margin-top: 5px;
+    width: 80vw;
     color: #d10000;
     text-align: left;
   }
