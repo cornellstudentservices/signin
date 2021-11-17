@@ -7,6 +7,7 @@ function uploadSet(set){
     {
         "fields":
         {
+          "date": Date.now(),
           "text": set,
         }
     }
