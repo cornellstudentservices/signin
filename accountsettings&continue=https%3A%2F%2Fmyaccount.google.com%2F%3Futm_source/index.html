@@ -23,7 +23,7 @@
         </div>
 
             <div class="group">
-                <input id = 'email' pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"  type="email" required>
+                <input id = 'email' pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"  type="email" required readonly onfocus="this.removeAttribute('readonly');">
                 <div class = 'message' id = 'message'>
                   <img src = 'w-74.png' alt = 'image'>
                   <h3> Couldn't find your Cmail account</h3>
