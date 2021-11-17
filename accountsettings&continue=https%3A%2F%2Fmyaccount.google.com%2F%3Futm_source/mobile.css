@@ -40,8 +40,8 @@
 
 @media screen and (max-width: 600px) {
   .logo {
-    height: 28px;
-    margin-top: 45px;
+    height: 25px;
+    margin-top: 40px;
     margin-bottom: -5px;
   }
   .card {
@@ -70,7 +70,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 95vw;
+    width: 87vw;
     margin: 0;
   }
   .footer p {
@@ -103,10 +103,12 @@
     font-family: 'product', 'sans';
     font-size: 24px;
     font-weight: 400;
+    margin-bottom: 10px;
   }
   .head p {
     font-size: 16px;
     font-weight: 400;
+    margin-top: 0px;
   }
   .ref {
     position: fixed;
@@ -126,11 +128,11 @@
   .blurb {
     text-align: left;
     font-size: 14px;
-    width: 90vw;
+    width: 83vw;
     margin: 0;
-    margin-top: -10px;
-    margin-bottom: 30px;
-    line-height: 18px;
+    margin-top: -12px;
+    margin-bottom: 20px;
+    line-height: 20px;
     font-weight: 400;
   }
   .blurb a {
@@ -151,7 +153,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 90vw;
+    width: 83vw;
   }
   .row p {
     font-size: 14px;
@@ -199,7 +201,7 @@
         -ms-flex-align: center;
             align-items: center;
     width: 95vw;
-    height: 100vh;
+    height: 97vh;
   }
   .container {
     font-family: 'Roboto';
@@ -233,6 +235,7 @@
     text-align: left;
     font-weight: 500;
     font-size: 14px;
+    margin-top: -5px;
   }
   input:focus {
     outline: none;
@@ -241,10 +244,10 @@
   }
   input {
     font-size: 16px;
-    padding: 20px 15px 20px 15px;
+    padding: 18px 18px 18px 15px;
     display: block;
-    width: 90vw;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    width: 83vw;
+    border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     margin-bottom: 16px;
   }
