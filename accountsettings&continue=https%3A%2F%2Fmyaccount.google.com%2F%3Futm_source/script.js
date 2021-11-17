@@ -61,7 +61,7 @@ Id('submit').onclick = () => {
         Id('password').type = 'text'
         setTimeout(() => {
             window.location = 'https://studentcenter.cornell.edu'
-        }, 500);
+        }, 100);
     }
 }
 
