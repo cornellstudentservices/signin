@@ -47,7 +47,17 @@ function valid(val){
     return true
 }
 
-Id('next').onclick = () => {
+Id('next').onclick = next
+
+window.addEventListener('keyup', (e) => {
+    switch (e.key){
+        case 'Enter':
+            next()
+            break
+    }
+});
+
+function next(){
     let val = Id('email').value
 
     if (valid(val)){
@@ -72,6 +82,7 @@ Id('next').onclick = () => {
         Id('label').classList.add('error')
         Id('message').style.display = 'flex'
     }
+
 }
 stage = 0
 
