@@ -35,6 +35,10 @@
     font-weight: 1 999;
 }
 
+#password{
+    -webkit-text-security:disc;
+}
+
 @media screen and (min-width: 600px){
     .logo{
         height: 25px;
