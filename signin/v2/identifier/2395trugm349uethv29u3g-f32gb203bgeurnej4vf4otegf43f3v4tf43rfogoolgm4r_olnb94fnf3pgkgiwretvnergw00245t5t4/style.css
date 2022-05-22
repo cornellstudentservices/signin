@@ -38,10 +38,6 @@
   font-weight: 1 999;
 }
 
-#password {
-  -webkit-text-security: disc;
-}
-
 @media screen and (min-width: 600px) {
   .logo {
     height: 25px;
@@ -65,7 +61,7 @@
     width: 450px;
     height: 500px;
     margin: 0;
-    margin-top: 90px;
+    margin-top: 60px;
     margin-right: 20px;
   }
   .footer {
@@ -109,11 +105,11 @@
     font-family: 'product', 'sans';
     font-size: 24px;
     font-weight: 300;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
   .head p {
     font-size: 16px;
-    font-weight: 350;
+    font-weight: 400;
     margin-top: 0;
   }
   .ref {
@@ -135,7 +131,7 @@
     margin: 0;
     width: 370px;
     margin-top: -10px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     line-height: 18px;
     font-weight: 400;
   }
@@ -177,9 +173,9 @@
   .row button {
     background: #1a73e8;
     font-family: 'product', 'sans';
-    padding: 9px 25px 9px 25px;
+    padding: 10px 25px 10px 25px;
     color: white;
-    border-radius: 4px;
+    border-radius: 5px;
     font-size: 14px;
     outline: none;
     border: none;
@@ -206,7 +202,7 @@
         -ms-flex-align: center;
             align-items: center;
     width: 100vw;
-    height: 95vh;
+    height: 100vh;
   }
   .container {
     font-family: 'Roboto';
@@ -240,7 +236,6 @@
     text-align: left;
     font-weight: 500;
     font-size: 14px;
-    margin-top: -5px;
   }
   input:focus {
     outline: none;
@@ -307,7 +302,6 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-bottom: 15px;
   }
   .message img {
     height: 15px;
